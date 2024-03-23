@@ -1,0 +1,46 @@
+.cardInner {
+  border: 1px solid transparent; /* Initially hide border */
+  overflow: hidden;
+ /* Ensure button does not affect layout */
+  transition: border-color 0.3s; /* Smooth transition for border color change */
+
+  &:hover {
+    border-color: #075ccc; /* Show border on hover */
+  }
+
+  .addButton {
+    display: none; /* Initially hide button */
+    transition: transform 0.3s; /* Smooth transition for button transform */
+    transform: translateY(100%); /* Initially position button below its normal position */
+    color: #075ccc;
+    color: azure;
+    transform: translateY(-1); /* Move button back to its normal position */
+    /* Set default color for the button */
+  }
+  
+  &:hover .addButton {
+    display: block; /* Show button when hovering over the container */
+    transform: translateY(0); /* Move button back to its normal position */
+  }
+  .clicked {
+    color: red; // Change the color to red when the heart is clicked
+  }
+
+
+
+  .heart {
+    display: none; /* Initially hide button */
+    transition: transform 0.3s; /* Smooth transition for button transform */
+    transform: translateY(100%); /* Initially position button below its normal position */
+    color: #075ccc;
+    color: azure;
+    transform: translateY(-1); /* Move button back to its normal position */
+    /* Set default color for the button */
+  }
+  
+  &:hover .heart {
+    display: block; /* Show button when hovering over the container */
+    transform: translateY(0); /* Move button back to its normal position */
+  }
+}
+
