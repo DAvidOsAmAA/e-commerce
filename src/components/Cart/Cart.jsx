@@ -33,16 +33,16 @@ export default function Cart() {
   async function updateProduct(id, count) {
     try {
       const data = await updateProductQnt(id, count);
-      console.log(data); // Log the response data to inspect its structure
+      console.log(data); 
       if (data.status === 'success') {
-        setCartDetails(data.data); // Update the cart details in the local state
+        setCartDetails(data.data);
         toast.success("Product quantity updated successfully");
       } else {
         throw new Error("Status is not 'success'");
       }
     } catch (error) {
-      console.log(error.message); // Log the error message for debugging
-      toast.error("Oops, something went wrong: " + error.message); // Show the error message in the toast
+      console.log(error.message); 
+      toast.error("Oops, something went wrong: " + error.message); 
     }
   }
   
